@@ -4,8 +4,13 @@ A Python library for creating and validating Persian user information, including
 
 ## Installation
 ```bash
-pip install PersianUser
+pip install persianuser
 ```
+
+## Requirements
+- Python >= 3.8
+- phonenumbers>=8.12.0
+- py3-validate-email>=1.0.6
 
 ## Usage
 ```python
@@ -48,3 +53,6 @@ class CustomUser(User):
 - Religion options: اسلام, مسیحیت, یهودیت, سایر موارد
 - Education options: کم سواد, سیکل, دیپلم, کاردانی, کارشناسی, کارشناسی ارشد, دکتری
 - Easy-to-use class with inheritance support
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
