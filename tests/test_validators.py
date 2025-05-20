@@ -20,7 +20,7 @@ def test_validate_phone_number():
 def test_validate_iran_national_id():
     assert validate_iran_national_id("1234567890") is False
     assert validate_iran_national_id("1111111111") is False
-    assert validate_iran_national_id("0060374689") is True
+    assert validate_iran_national_id("0024138118") is True
 
 
 def test_validate_age():
