@@ -1,6 +1,6 @@
 import re
 import phonenumbers
-from phonenumbers import NumberParseError
+from phonenumbers.phonenumberutil import NumberParseException
 from validate_email import validate_email as real_email_validation
 from enum import Enum
 
@@ -43,7 +43,7 @@ def validate_phone_number(phone: str, region: str = "IR") -> bool:
     try:
         parsed_number = phonenumbers.parse(phone, region)
         return phonenumbers.is_valid_number(parsed_number)
-    except NumberParseError:
+    except NumberParseException:
         return False
 
 
@@ -52,11 +52,9 @@ def validate_iran_national_id(national_id: str) -> bool:
     if not national_id.isdigit() or len(national_id) != 10:
         return False
 
-    # Check for invalid same-digit patterns (e.g., 1111111111)
     if len(set(national_id)) == 1:
         return False
 
-    # Calculate checksum
     total = 0
     for i in range(9):
         total += int(national_id[i]) * (10 - i)
