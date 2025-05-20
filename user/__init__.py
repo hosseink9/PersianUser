@@ -1,4 +1,4 @@
-from .user import User
+from .user import PersianUser
 
 __version__ = "0.1.0"
-__all__ = ["User"]
+__all__ = ["PersianUser"]

@@ -8,7 +8,7 @@ from .validators import (
 from .validators import Gender, Religion, Education
 
 
-class User:
+class PersianUser:
     """Base class for creating and validating a Persian user."""
 
     def __init__(
